@@ -1,4 +1,4 @@
-#jednakoBtn {
+#equalsBtn {
     -fx-background-color: lightcoral;
     -fx-font-family: Arial;
     -fx-font-size:20;
@@ -10,7 +10,7 @@
     -fx-padding: 0;
 }
 
-#unosBrojeva {
+#display {
     -fx-background-color: lightgreen;
     -fx-font-family: Arial;
     -fx-font-size:20;
