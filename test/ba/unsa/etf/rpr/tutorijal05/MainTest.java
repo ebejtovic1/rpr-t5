@@ -1,7 +1,5 @@
 package ba.unsa.etf.rpr.tutorijal05;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,6 +10,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(ApplicationExtension.class)
 class MainTest {
@@ -105,5 +105,19 @@ class MainTest {
         robot.clickOn("#btn1");
         robot.clickOn("#btn0");
         assertEquals("10", display.getText());
+    }
+    @Test
+    public void dotBtn2x (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn8");
+        robot.clickOn("#btn8");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#dotBtn");
+        robot.clickOn("#btn8");
+        robot.clickOn("#btn8");
+        robot.clickOn("#plusBtn");
+        robot.clickOn("#btn1");
+        robot.clickOn("#equalsBtn");
+        assertEquals("89.88", display.getText());
     }
 }
